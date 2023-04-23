@@ -15,9 +15,8 @@ int gcd(int a,int b)    //iterative
 
 int gcd(int a,int b)    //recurssive
 {
-    if(b==0)
+    if (b == 0)
         return a;
-    else
-        gcd(b,a%b);
+    return gcd(b, a % b);
 }
 //time:O(log(a+b))
