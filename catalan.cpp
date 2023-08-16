@@ -6,7 +6,7 @@ int catalan(int n)
   for(int i=1;i<=n;i++){
     dp[i]=0;
     for(int j=0;j<i;j++)
-      dp[i]=(dp[i]+(dp[j]*dp[i-j-1]%mod)%mod;
+      dp[i]=(dp[i]+(dp[j]*dp[i-j-1])%mod)%mod;
   }
   return dp[n];
 }
