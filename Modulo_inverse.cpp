@@ -1,18 +1,19 @@
 //recursive
 int gcdExtended(int a, int b, int* x, int* y);
- 
-// Function to find modulo inverse of a
-void modInverse(int A, int M)
+int modInverse(int A, int M)
 {
     int x, y;
     int g = gcdExtended(A, M, &x, &y);
     if (g != 1)
+    {
         cout << "Inverse doesn't exist";
+        return 0;
+    }
     else {
  
         // m is added to handle negative x
         int res = (x % M + M) % M;
-        cout << "Modular multiplicative inverse is " << res;
+        return res;
     }
 }
 // Function for extended Euclidean Algorithm
@@ -39,6 +40,8 @@ Time:O(logM)
 Space:O(logM)
 
 
+
+ 
 //iterative
 int modInverse(int A, int M)
 {
@@ -72,6 +75,8 @@ int modInverse(int A, int M)
 Time:O(logM)
 Space:O(1)
 
+
+ 
 //for 1 to n
 void modularInverse(int n, int prime)
 {
